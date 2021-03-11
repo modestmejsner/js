@@ -70,3 +70,31 @@
 
 // let now = new Date;
 // let grades = ["A","B","C",'D','E','F'];
+{
+
+    let myName = "Modest"; //primitives
+
+    myName = new String(myName); //seriosly? WOW- BOXING
+    myName = myName.toUpperCase(); //boxed to object
+    myName = myName.valueOf(); //bierze tylko value i przenosi czyli UNBOXING
+    
+    console.log(typeof(myName));
+
+
+    let yourName = new String("Pati");
+    yourName = yourName.valueOf();
+    console.log(typeof(yourName));
+
+
+//     console.log(typeof(myName.toUpperCase())); // object
+//     myName = myName.toUpperCase(); //back to primitives
+//     console.log(typeof(myName)); // string
+    
+//     let yourName = new String("Patrycja"); //object creation
+//   //  yourName.valueOf(); //returns object type
+//     let youPrimitiveName = yourName.toUpperCase();
+//     console.log(typeof(youPrimitiveName));
+//     console.log(typeof(yourName)); //write to console object
+
+
+}
