@@ -41,13 +41,32 @@
 // }
 // console.log(x);
 
-{
- let x = 5;
- let b = "10";
- x = x + b;
- console.log(x);
+// {
+//  let x = 5;
+//  let b = "10";
+//  x = x + b;
+//  console.log(x);
 
+// }
+
+// //primitives
+// //object
+
+let tacos = null; //null when we decide to be null
+// undefined when computer knows about it
+
+let person  = {
+
+name: "Modest", //key:value
+age: 40, //key:value
+favFood: "Herbalife...", //key:value
+fun: function() {
+    console.log("Yeh");
+    }
 }
 
-//primitives
-//object
+// person.fun();
+// person.age;
+
+let now = new Date;
+let grades = ["A","B","C",'D','E','F'];
