@@ -52,21 +52,21 @@
 // //primitives
 // //object
 
-let tacos = null; //null when we decide to be null
-// undefined when computer knows about it
+// let tacos = null; //null when we decide to be null
+// // undefined when computer knows about it
 
-let person  = {
+// let person  = {
 
-name: "Modest", //key:value
-age: 40, //key:value
-favFood: "Herbalife...", //key:value
-fun: function() {
-    console.log("Yeh");
-    }
-}
+// name: "Modest", //key:value
+// age: 40, //key:value
+// favFood: "Herbalife...", //key:value
+// fun: function() {
+//     console.log("Yeh");
+//     }
+// }
 
-// person.fun();
-// person.age;
+// // person.fun();
+// // person.age;
 
-let now = new Date;
-let grades = ["A","B","C",'D','E','F'];
+// let now = new Date;
+// let grades = ["A","B","C",'D','E','F'];
