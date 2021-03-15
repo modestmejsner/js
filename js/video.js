@@ -353,12 +353,12 @@
 // grades.length = 2;
 // console.log(grades);
 
-let grades = [15, 4, 4, 15, 12, 15, 65, 34];
-grades.length = 30;
-grades[50] = 50;
+// let grades = [15, 4, 4, 15, 12, 15, 65, 34];
+// grades.length = 30;
+// grades[50] = 50;
 
-let found = false;
-let largest = grades[0];
+// let found = false;
+// let largest = grades[0];
 
 // for (let i = 0; i < grades.length; i++) {
 //     if (grades[i]!== undefined) {
@@ -378,17 +378,101 @@ let largest = grades[0];
 // if (found) {
 //     console.log(largest);
 // }
-let total = 0;
-let count = 0;
-for (let i = 0; i < grades.length; i++) {
-    if (grades[i] !== undefined) {
-        //legit value
-        count++;
-        total += grades[i];
-    }
+// let total = 0;
+// let count = 0;
+// for (let i = 0; i < grades.length; i++) {
+//     if (grades[i] !== undefined) {
+//         //legit value
+//         count++;
+//         total += grades[i];
+//     }
+// }
+// let avg = total/count;
+// console.log(avg);
+
+
+// let grades = [];
+
+// while (true) {
+//     let input = prompt("Add a grade");
+//     if (input === "q" || input === null) {
+//         break;
+//     }
+//     grades.push(input);
+//     console.log(grades);
+
+grades = [
+    [ 0, 1, 11, 2, 32 ],
+    [ 0, 1, 11, 2, 32, 21, 45, 56, 5, 8],
+    [ 0, 10, 1, 21, 3, 2, 3, 1, 3, 2]
+    ]; 
+
+// //console.log(grades.sort());
+// //console.log(grades.sort(function (a,b) {return a - b} ));
+// // console.log(grades);
+// // console.log(grades.reverse());
+// // console.log(grades);
+// // grades.fill(-1,0, grades.length);
+// // console.log(grades);
+// // grades.copyWithin();
+// gradesB = ["df","adsad","adadsa"]
+
+// console.log(grades.concat(gradesB)); //Does NOT Change the array
+// console.log(grades)
+
+// console.log(grades.push(13)); //changes the array
+// console.log(grades)
+
+// console.log(grades + gradesB); //returns string with ',' between
+
+// console.log(grades.includes(13)); //true/false
+// console.log(grades.indexOf(11)); //number
+// console.log(grades.join()); 
+// console.log(grades.join(" ")); 
+// console.log(grades.join("/")); 
+
+// gradess = [12, 123, 123, 123, 123 ,123 ,123 ,123 ,123 ,11134, 13134245234525234234];
+// grades.slice(3,5) //3 is included but 5 is excluded
+
+// total = 0;
+// grades.forEach(element => {
+//     total += element;
+// });
+
+// console.log(Number.isSafeInteger(total));
+// console.log(total);
+
+// grades.forEach(function(element, i, array) {
+//     console.log(element, i, array);
+// })
+
+
+// grades.forEach(
+
+//     function(row) {
+//         row.forEach(function(column) {
+//         console.log(column);
+//         });
+//         console.log("~~~~~~~~~~~~~~~~~");
+//     }
+// )
+
+
+outerLoop: for (let i = 0; i < grades.length; i++) {
+    for (let k = 0; k < grades[i].length; k++) {
+        console.log(grades[i][k]);
+        if (grades[i][k] === 56) {
+             console.log("Found it")
+        //continue outerLoop;  //goes to outerloop
+        break outerLoop; //end of the outerLoop          
+        }
+      
+    }~
+    console.log("~ ~~~~~~~~~~") //this code is ignore with continue outerLoop
+    //this code is not ignored with a break
 }
-let avg = total/count;
-console.log(avg);
+
+
 
 
 
