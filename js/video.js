@@ -170,21 +170,146 @@
     // console.log(content.split(" "));
     
 
-    let position = {
-        x: 10,
-        y: 20
+    // let position = {
+    //     x: 10,
+    //     y: 20,
+    //     print: function () {
+    //         console.log(`X: ${this.x}, Y: ${this.y}`);
+    //     },
+    //     myObject : {
+    //         sweetProperty: "Hello"
+    //     }
+    // }
+    // let k = "string";
+    // let l = k;
+    // //primitives copied its values to the next variable
+
+    // let myPosition = position; //point to the same object any changes reflect in both
+    // console.log(position);
+    // console.log(myPosition);
+
+    // position.x = 100;
+    // console.log(position);
+    // console.log(myPosition);
+
+    // function print() {
+    //     'use strict';
+    //     console.log(this);
+    //    // console.log(`X: ${this.x}, Y: ${this.y}`);
+    // }
+    // print();
+    // console.log(position.myObject.sweetProperty);
+    // position.print();
+
+
+    // let name = prompt();
+    // if(name === 12) //3 jest najbezpieczniejsze
+    // //
+    // {
+
+    //         console.log("Welcome");
+    // }
+    // else 
+    // if(name ==="Sally") {}
+    // else 
+    // if(name ==="Pati") {}
+    // //else //optional 
+    // //{}
+
+    // //    5 różne od "5" sprawdza typy danych
+
+//   let age = prompt("Age?");
+//   let name = prompt("Name?");
+//     if (age<13) //&&  !(name ==="Caleb")) //better to put it below
+//     {
+//         if ((name ==="Caleb")) {
+//             console.log("Welcome"); 
+//         }
+// }
+
+// let name = prompt("What is your name?");
+// switch (name) {
+//     case "Caleb":
+//         console.log("Welcome");
+//         break;
+//     case "Claire":
+//         console.log("Get out here");
+//         break;
+//     default:
+//         console.log("I guess your are welcome...");
+//         break;
+// }
+
+// let name = prompt("What is your name?");
+// switch (name) {
+//     default:
+//         console.log("I guess your are welcome...");
+//         break; //without this next is called any way regardless of switch
+//     case "Caleb":
+//     case "Claire":
+//         console.log("Get out here");
+//         break;
+//}
+
+// if (name === "Claire") {console.log('Hello');}
+// console.log('This is everytime ');
+
+// let name = prompt("What is my name?");
+// //let points = name === "Modest" ? 10 : 0; //Ternary Operator
+// //console.log(points);
+// let points = name === "Modest" ? console.log("10") : console.log("0"); //Ternary Operator
+
+// let i =0; //initialiozation
+// while (i<10) { //condition
+//     console.log(i);
+//     //update
+//     i++;
+// }
+
+// let i = 1000; //init
+// do { //executed at least ONES
+//     console.log(i);
+//     i++; //update
+// } while (i<10); //condition
+
+// for (let index = 0; index < 6; index++) {
+//     console.log(index);  
+// }
+
+// let password;
+// do {
+//     password = prompt("What is the passcode?");
+// } while (password.toLowerCase() !== "let me in");
+//     console.log("in");
+// // 
+
+// let list = [1,2,3,4,5,6];
+// let myString = "Search this c string cc baby c";
+// let chatToSearch = "c";
+// for (let index = 0; index < myString.length; index++) {
+//     const element = myString[index];
+//     if (myString[index]==='c') {
+//         console.log(element + " is found at index " + index);
+//         break;
+//     }
+// }
+//break breaks the loop
+
+
+// let myString = "Search this c string cc baby c";
+// let chatToSearch = "c";
+// for (let index = 0; index < myString.length; index++) {
+//     const element = myString[index];
+//     if (myString[index]==='a') {
+//      continue;
+//     }
+//     console.log(myString[index]);
+// }
+
+for (let i = 0; i < 10; i++) {
+    for (let k = 0; k < 10; k++) {
+        console.log(i,k);
     }
-    let k = "string";
-    let l = k;
-    //primitives copied its values to the next variable
-
-    let myPosition = position; //point to the same object any changes reflect in both
-    console.log(position);
-    console.log(myPosition);
-
-    position.x = 100;
-    console.log(position);
-    console.log(myPosition);
 }
 
-
+}
