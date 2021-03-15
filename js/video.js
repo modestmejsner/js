@@ -306,10 +306,100 @@
 //     console.log(myString[index]);
 // }
 
-for (let i = 0; i < 10; i++) {
-    for (let k = 0; k < 10; k++) {
-        console.log(i,k);
+// for (let i = 0; i < 10; i++) {
+//     for (let k = 0; k < 10; k++) {
+//         console.log(i,k);
+//     }
+// }
+
+// for (let i = 0; i < 10; i++) {
+//     for (let k = i; k < 10; k++) {
+//         console.log(i,k);
+//     }
+// }
+// let d = document.getElementById("destination");
+// for (let i = 0; i < 10; i++) {
+//     for (let k = i; k >= 0; k--) {
+//         d.append(k + " ");
+//     }
+//     let br = document.createElement('br');
+//     d.appendChild(br);
+// }
+
+// let ages = [12,34,15];
+// ages.length = 10;
+// ages[9] = 9;
+// console.log(ages);
+// ages[11] = 11;
+// console.log(ages);
+
+
+// let stuff = [12, "string", function doSomething() {    },[1,2,3] ]
+
+// let grades = [
+// [36,12,44], [100,100,100],[12,13,14]
+// ]
+// console.log(grades[2][1])
+
+// let grades = [12, "c", {}, function () {
+//     console.log("hello");
+// }]
+// grades[3]();
+
+// let grades = [];
+// grades[0] = 12;
+// grades[1] = 122;
+// grades[40] = 123;
+// grades.length = 2;
+// console.log(grades);
+
+let grades = [15, 4, 4, 15, 12, 15, 65, 34];
+grades.length = 30;
+grades[50] = 50;
+
+let found = false;
+let largest = grades[0];
+
+// for (let i = 0; i < grades.length; i++) {
+//     if (grades[i]!== undefined) {
+//         found = true
+//         console.log(grades[i]);        
+//     }
+// }
+
+
+// for (let i = 0; i < grades.length; i++) {
+//     if (grades[i]> largest) {
+//         largest = grades[i]    
+//         found = true;
+//     }
+// }
+
+// if (found) {
+//     console.log(largest);
+// }
+let total = 0;
+let count = 0;
+for (let i = 0; i < grades.length; i++) {
+    if (grades[i] !== undefined) {
+        //legit value
+        count++;
+        total += grades[i];
     }
 }
+let avg = total/count;
+console.log(avg);
 
-}
+
+
+
+
+
+
+
+
+
+
+
+}  
+
