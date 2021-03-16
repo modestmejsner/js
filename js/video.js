@@ -514,18 +514,53 @@ grades = [
 // let myDate = new Date("1997-10-01");
 // console.log(myDate);
 
-let myDate = new Date(1997,10,01,10,10,10);
-let myDate1 = new Date(Date.UTC(1997,10,01,10,10,10));
+// let myDate = new Date(1997,10,01,10,10,10);
+// let myDate1 = new Date(Date.UTC(1997,10,01,10,10,10));
 
-// console.log(myDate, myDate1);
-// console.log(myDate.getMonth());
+// // console.log(myDate, myDate1);
+// // console.log(myDate.getMonth());
 
-console.log(window);
-
-
+// console.log(window);
 
 
 
+// function dispName(x) {
+//     x = {}; //new object created; // więc tworzymy nowy object bez tego jest przekazywanie przez referencje czyli zmieniamy object 
+//     return x.name = "Modest"
+// }
+// let myObject = {name: "Pati"}
+// console.log(dispName(myObject)); //przekazujemy object wiec przez referencje
+// console.log(myObject.name);
+
+// function doSomething(x) {
+//         return x();
+// }
+
+// let myFunc = () => 5 * 5;
+// let y = doSomething(myFunc); // no need to () because it is invoked inside doSomething
+// console.log(y);
+
+// //a function expression
+// function doSomething(x) {
+//         console.log('Done');
+// }
+
+
+// setTimeout(doSomething, 2000); //a synchronized // after 2sec setTimeout calls doSomething
+// //ajax asynchronized
+
+// //calllback is call back function os a result of function
+
+
+let myFunc = function (x,y) { //fuction expression vs function declaration before
+    let total = 1;
+    for (let index = 0; index < y; index++) {
+        total *=x;
+    }
+    return total;
+}
+
+console.log(myFunc(3,3));
 
 }  
 
