@@ -552,7 +552,34 @@ grades = [
 // //calllback is call back function os a result of function
 
 
-let myFunc = function (x,y) { //fuction expression vs function declaration before
+// let myFunc = function (x,y) { //fuction expression vs function declaration before
+//     let total = 1;
+//     for (let index = 0; index < y; index++) {
+//         total *=x;
+//     }
+//     return total;
+// }
+
+// console.log(myFunc(3,3));
+
+// var x;
+// console.log(x);
+// x = 10;
+
+//doStuff(); nie możemy użyć wcześniej w function expression
+
+// function doStuff() { //function declaration //body is hoisted as well
+//     console.log('hej');
+// }
+
+// var doStuff = function() { //function expression //body is NOT hoisted
+//     console.log('hej');
+    
+// }
+
+// doStuff(); //a tutaj już możemy
+
+    function pow(x,y) { //function expression is ones we assigned the function into variable!
     let total = 1;
     for (let index = 0; index < y; index++) {
         total *=x;
@@ -560,7 +587,34 @@ let myFunc = function (x,y) { //fuction expression vs function declaration befor
     return total;
 }
 
-console.log(myFunc(3,3));
+let coolFunctions = [pow]
+console.log(coolFunctions[0](3,3));
+
+let mathFunctions  = {power: pow};
+console.log(mathFunctions.power(3,3));
+
+pow.description = "WIll raise numbers to power "; //dodanie propertasa do funkcji - WOW WOW
+console.log(pow.description);
+
+function callbackExpression(callback){
+    return callback(3,5);
+}
+
+console.log(callbackExpression(pow));
+
+function returnAFunction() {
+    return pow;
+}
+
+console.log(returnAFunction()(10,3));
+
+
+
+
+
+
+
+
 
 }  
 
