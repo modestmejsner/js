@@ -458,27 +458,69 @@ grades = [
 // )
 
 
-outerLoop: for (let i = 0; i < grades.length; i++) {
-    for (let k = 0; k < grades[i].length; k++) {
-        console.log(grades[i][k]);
-        if (grades[i][k] === 56) {
-             console.log("Found it")
-        //continue outerLoop;  //goes to outerloop
-        break outerLoop; //end of the outerLoop          
-        }
+// outerLoop: for (let i = 0; i < grades.length; i++) {
+//     for (let k = 0; k < grades[i].length; k++) {
+//         console.log(grades[i][k]);
+//         if (grades[i][k] === 56) {
+//              console.log("Found it")
+//         //continue outerLoop;  //goes to outerloop
+//         break outerLoop; //end of the outerLoop          
+//         }
       
-    }~
-    console.log("~ ~~~~~~~~~~") //this code is ignore with continue outerLoop
-    //this code is not ignored with a break
-}
+//     }~
+//     console.log("~ ~~~~~~~~~~") //this code is ignore with continue outerLoop
+//     //this code is not ignored with a break
+// }
+
+
+// var valentine = new Date(); // <- this is constructor special function to return object
+// var valentine1 = new Date(1990, 11 ); //11 os zero based so it is December
+// //UNIX Epoch Jan 1 1970
+// var valentine2 = new Date(0); //11 os zero based so it is December
+
+
+// console.log(valentine2); 
+
+
+//let myDate = new Date(2020,12); //January 2021
+// let myDate = new Date(10000); ///10  sekund 10 000 milisekund to 10 sekund
+// let time = Date.now(); //1615816933366
+// console.log(time);
+
+// let start = Date.now();
+// let x = 0;
+// for (let index = 0; index < 10000000000; index++) {
+//     x=x+index;
+    
+// }
+// let end = Date.now();
+// let total = end - start;
+
+// console.log(total + "in milisekunds");
+
+// let before = new Date(2020,10,15);
+// let after = new Date(2020,10,20);
+
+// let oneDay = 1000* 60 * 60 * 24;
+
+// let days = (after - before)/oneDay;
+// console.log(days);
 
 
 
+// let myDate = new Date("12 Januarry 1995 00:15:54 GMT");
+// console.log(myDate);
 
+// let myDate = new Date("1997-10-01");
+// console.log(myDate);
 
+let myDate = new Date(1997,10,01,10,10,10);
+let myDate1 = new Date(Date.UTC(1997,10,01,10,10,10));
 
+// console.log(myDate, myDate1);
+// console.log(myDate.getMonth());
 
-
+console.log(window);
 
 
 
