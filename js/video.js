@@ -579,42 +579,130 @@ grades = [
 
 // doStuff(); //a tutaj już możemy
 
-    function pow(x,y) { //function expression is ones we assigned the function into variable!
-    let total = 1;
-    for (let index = 0; index < y; index++) {
-        total *=x;
+//     function pow(x,y) { //function expression is ones we assigned the function into variable!
+//     let total = 1;
+//     for (let index = 0; index < y; index++) {
+//         total *=x;
+//     }
+//     return total;
+// }
+
+// let coolFunctions = [pow]
+// console.log(coolFunctions[0](3,3));
+
+// let mathFunctions  = {power: pow};
+// console.log(mathFunctions.power(3,3));
+
+// pow.description = "WIll raise numbers to power "; //dodanie propertasa do funkcji - WOW WOW
+// console.log(pow.description);
+
+// function callbackExpression(callback){
+//     return callback(3,5);
+// }
+
+// console.log(callbackExpression(pow));
+
+// function returnAFunction() {
+//     return pow;
+// }
+
+// console.log(returnAFunction()(10,3));
+
+
+//     pow.calculated = [];
+//     function pow(x,y) {
+//         let total = 1;
+//         for (let index = 0; index < y; index++) {
+//         total *=x;
+//         }
+//     pow.calculated.push(total);
+//     console.log(pow.calculated);
+//     return total;
+// }
+
+
+// pow(3,3);
+// pow(3,3);
+// pow(10,3);
+
+
+
+// pow.calculated = {}; //object is a key: value pair
+// function pow(x,y) {
+//     let stringVersion = x + '^' + y;
+//     console.log(stringVersion);
+
+// if (stringVersion in pow.calculated) {
+//     console.log("found it!");
+//     return pow.calculated[stringVersion];
+// }
+
+//     let total = 1;
+//     for (let index = 0; index < y; index++) {
+//     total *=x;
+//     }
+// //pow.calculated.push(total);
+// pow.calculated[stringVersion] = total;
+// console.log(pow.calculated);
+// return total;
+// }
+
+
+// pow(3,3);
+// pow(3,3);
+// pow(10,3);
+
+
+// function pow(x,y, ...extra) {
+
+//     console.log(extra);
+
+//     //if (y == undefined) { y=2}
+    
+//     y = typeof y ==="undefined" ? 2 : y;
+//     let total = 1;
+//     for (let index = 0; index < y; index++) {
+//     total *=x;
+//     }
+//     return total;
+// }
+
+// // console.log(pow());
+// // console.log(pow(4,2,3,4));
+
+// console.log(pow(3,2, 2, 45,67));
+
+
+// function largestFunction(x, ...extra) {
+//     console.log(arguments);
+//     console.log(this);
+//     let largest = x;
+//     for (let i = 0; i < extra.length; i++) {
+//         if (largest < extra[i]) {
+//             largest = extra[i];
+//         }
+//     }
+//     return largest;
+// }
+// console.log(largestFunction(10,2,3,4,50,1000, 10, 123));
+
+
+// function x(a,b) {
+//     console.log(this);
+// }
+
+// x(1,2);
+
+
+let me = {
+    name: "modest",
+    outputMe: function() {
+        console.log(this);
+        console.log(this.name);
+
     }
-    return total;
-}
+};
 
-let coolFunctions = [pow]
-console.log(coolFunctions[0](3,3));
-
-let mathFunctions  = {power: pow};
-console.log(mathFunctions.power(3,3));
-
-pow.description = "WIll raise numbers to power "; //dodanie propertasa do funkcji - WOW WOW
-console.log(pow.description);
-
-function callbackExpression(callback){
-    return callback(3,5);
-}
-
-console.log(callbackExpression(pow));
-
-function returnAFunction() {
-    return pow;
-}
-
-console.log(returnAFunction()(10,3));
-
-
-
-
-
-
-
-
+me.outputMe();
 
 }  
-
