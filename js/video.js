@@ -693,16 +693,547 @@ grades = [
 
 // x(1,2);
 
+// let me = {
+//     name: "modest",
+//     outputMe: function() {
+//         console.log(this);
+//         console.log(this.name); //only inside the function
+//     }
+// };
 
-let me = {
-    name: "modest",
-    outputMe: function() {
-        console.log(this);
-        console.log(this.name);
+// me.outputMe();
 
+// }  
+
+// let me = {
+//     name: "modest",
+//     outputMe: outputMe
+// };
+
+// function outputMe() { 
+//     "use strict"; //when we call it as a function working //when we call it as a method not working <undefinded>
+//     console.log(this);
+// };
+
+// function outputMeStrict() {
+//     'use strict';
+//     console.log(this);
+// ;}
+
+// function Person() {
+//     this.name = "Modest";
+//     console.log(this);
+// }
+
+// me.outputMe(); //method
+// outputMe(); //function - "this" point to window object
+// outputMeStrict(); //undefined
+
+// let person = new Person(); ///working inside constructor
+
+
+
+// function doStuff(input, input1) {
+//     console.log(input, input1);
+//     console.log(this);
+// }
+
+// doStuff.call("Modest",5, 10); //call methods takes first parameter to modyfie this and parameters are not arrays but seperate arguments
+
+
+
+// function doStuff(input, input1) {
+//     console.log(input, input1);
+//     console.log(this);
+// }
+// let args = [5,10];
+// doStuff.apply("Modest", args); //apply methods takes first parameter to modyfie this and parameter are array
+
+
+// function doStuff(input, input1) {
+//     console.log(input, input1);
+//     console.log(this);
+// }
+// let me = {name: "Modest"}
+// let newFunction = doStuff.bind(me, 5, 10); //bind method creates new function so we need to assing it to something
+// newFunction();
+
+// // "this" is named also function contekst
+
+// function cube(x) {
+// return x*x*x;
+// }
+// console.log(cube(5));    
+
+
+// let cubArray = (x) =>  x*x*x;
+// console.log(cubArray(5));    
+
+// cubArray = (x) => {
+//     console.log(x);
+//     return x*x*x;
+// };
+
+// console.log(cubArray(5));    
+
+
+
+// let arrow = () => this;
+// function normal() {
+//     return this;
+// }
+// console.log(arrow());
+// console.log(normal());
+
+// let functions = {
+//     arrow: arrow,
+//     normal: normal
+// }
+
+// console.log(functions.arrow());
+// console.log(functions.normal());
+
+
+
+
+// let arrow = () => this;
+// function normal() {
+//     return this;
+// }
+// console.log(arrow());
+// console.log(normal());
+
+// let functions = {
+//     this: this,
+//     arrow: arrow,
+//     normal: normal,
+//     arrowTest: () => this
+// }
+
+// console.log(functions.arrow());
+// console.log(functions.normal());
+// console.log(functions.arrowTest());
+// console.log(functions.this);
+
+// function normal() {
+//     return this;
+// }
+// let arrow = () => this;
+// let newFunc = arrow.bind("hello"); //we were not able to override this by hello 
+// console.log(newFunc()); //returns still "this" so binding the arrow fuction is useless,
+
+// console.log(normal.bind("this")()); //binding creates the new function and it usefull for non-arrow fucntions
+
+
+
+
+
+// function fact(x) {
+//     let total = x;
+//     for (let index = x-1; index > 1; index--) {
+//         //console.log(total);
+//        total *= index;
+//     };
+//     return total;
+// }
+
+//console.log(fact(5));
+
+//document.getElementById("lemons")
+//.onclick = () => {console.log("Clicked")};
+
+//document.getElementById("lemons")
+//onmouseover = () => {console.log("onmauseover")};
+
+
+
+// try {
+//     doensotexist;
+    
+// } catch (e) {
+//     console.log(e, "error");
+// }
+// finally {
+
+//     console.log("zawsze się wykona");
+// } 
+
+// console.log("a tutaj dalszy krok");
+
+
+// function doSthng() {
+//     throw {error: "This broke, code: -1"}
+// }
+
+// try {
+//     doSthng();
+// } catch (error) {
+//     console.log(error);
+//     console.log("error");
+// }
+//  finally {
+//     console.log("Wrapping this up");
+     
+//  }
+
+// function doSthng() {
+//     throw {error: "This broke, code: -1"}
+// }
+
+// // doSthng();
+
+// function doSthng() {
+//     throw new Error();
+// }
+// doSthng();
+
+
+
+//============================= object oriented programming ============================================
+
+// function User(name, interests) { //capital U as User //the best way to create a constructor
+//     //console.log(this);
+//     this.name = name;
+//     this.interests = interests;
+//     //this.method = nie poleca się wrzucać metod do konstruktora 
+
+//     //console.log(this);
+
+//     this.outputStuff = function() { 
+//         console.log("My name is : ", this.name, this.interests);
+//     } //every time when we create object we create an method -- it is NOT efficient
+// }
+
+// User.prototype.greet = function() { 
+//     console.log("My name is : ", this.name, this.interests)
+// } //this is available for every User and it is created only ONES //MEMORY Efficiency
+
+// function newUser(name, interests) { //Factory Function //old way to do this/ we can see it but no need to use it
+//     let person = {
+//     name: name,
+//     interests: interests
+//     };
+//     return person;
+// }
+
+// let me = new User("Modest", ["eating","cooking","walking"]);
+// let you = new User("Caleb", ["driving","running"]);
+// me.membership = "Gold";
+// console.log(me);
+// console.log(you);
+
+
+//============================= inharitance ============================================
+
+// let me = { 
+//     name: "Modest" 
+// };
+
+// let x = new Object()
+// console.log(Object.getPrototypeOf(x));
+
+// {
+//     let user = {
+//         active: false,
+//         sayHello: function() {
+//             return this.name + " says hi!";
+//         }
+//     };
+
+//     let student = {
+//         name: "Peasant student",
+//         major: "English"
+//     };
+
+//     let teacher = {
+//         name: "Caleb",
+//         teaching: ["math", "science"]
+//     }
+
+//     Object.setPrototypeOf(teacher,user);
+//     Object.setPrototypeOf(student,user);
+
+//     student.active = true;
+
+//     console.log("teacher",teacher.sayHello()); //we can see it and its set to true
+    
+//     console.log("student",student.sayHello());
+
+// }
+
+
+//============================= polimorphism ============================================
+
+
+// {
+//     let user = {
+//         active: false,
+//         sayHello: function() {
+//             return this.name + " says hi!";
+//         }
+//     };
+
+//     let student = {
+//         name: "Peasant student",
+//         major: "English"
+//     };
+
+//     let teacher = {
+//         name: "Caleb",
+//         teaching: ["math", "science"],
+//         sayHello: function() {
+//             let message = this.name + " teaches ";
+//             this.teaching.forEach(function(e) {
+//                 message += e + ",";
+//             })
+//             return message;
+//         }
+//     }
+
+//     Object.setPrototypeOf(teacher,user);
+//     Object.setPrototypeOf(student,user);
+
+//     student.active = true;
+
+//   //  console.log("teacher",teacher.sayHello()); //we can see it and its set to true
+    
+//   //  console.log("student",student.sayHello());
+
+//     let newMember = [teacher, student];
+
+//     newMember.forEach(function(e) {
+//         console.log(e.sayHello());
+//     })
+//     console.log("Teacher hasOwnProperty? ", teacher.hasOwnProperty("active") );//checking only for its own property but no inherited properties
+//     console.log("Name in teacher? ", "active" in teacher ); //check the property in object using in keyword // with inherited properties too
+//     console.log("Name in teacher? ", teacher.name  !== undefined);
+//     console.log(teacher);
+
+//     let properties = [];
+//     for (let prop in teacher) {
+//         if (teacher.hasOwnProperty(prop)) {
+//             properties.push(prop);
+//         }
+//     }
+//     console.log(properties);
+// }
+
+
+
+
+    function User() {
+        this.active = false;
+        }
+    User.prototype.sayHello = function() {
+                   return this.name + " says hi!";
+        }
+   function Student(name, major) {
+        this.name = name ;
+        this.major = major ;
+        }    
+    Student.prototype = new User();
+
+    function Teacher(name, teaching) {
+        this.name = name;
+        this.teaching = teaching;
+        }
+    Teacher.prototype = new User();
+    Teacher.prototype.sayHello = function() {
+        return "Teacher says hi!";
     }
-};
 
-me.outputMe();
+        let student = new Student("Peasant student","English");
+        let teacher = new Teacher( "Caleb", ["math", "science"]);
+        console.log(student,teacher);
+        
+        console.log(teacher instanceof Teacher);
+        console.log(teacher instanceof User);
+        console.log(teacher instanceof Student);
 
-}  
+        if (teacher instanceof Student) {
+            console.log("yep");
+        }
+        else 
+        {
+            console.log("nope"); 
+        }
+         function doSthng(user) {
+            if (user instanceof User) {
+                return 5;
+            }
+            return -1;
+    }
+        console.log(doSthng("teacher"));
+
+    //     Object.setPrototypeOf(teacher,user);
+    //     Object.setPrototypeOf(student,user);
+    
+    //     student.active = true;
+    
+    //   //  console.log("teacher",teacher.sayHello()); //we can see it and its set to true
+        
+    //   //  console.log("student",student.sayHello());
+    
+    //     let newMember = [teacher, student];
+    
+    //     newMember.forEach(function(e) {
+    //         console.log(e.sayHello());
+    //     })
+    //     console.log("Teacher hasOwnProperty? ", teacher.hasOwnProperty("active") );//checking only for its own property but no inherited properties
+    //     console.log("Name in teacher? ", "active" in teacher ); //check the property in object using in keyword // with inherited properties too
+    //     console.log("Name in teacher? ", teacher.name  !== undefined);
+    //     console.log(teacher);
+    
+    //     let properties = [];
+    //     for (let prop in teacher) {
+    //         if (teacher.hasOwnProperty(prop)) {
+    //             properties.push(prop);
+    //         }
+    //     }
+    //     console.log(properties);
+
+    // let list = document.childNodes[1].childNodes[2].childNodes[7];
+    // console.log(list);
+    // console.log(list.parentElement);
+    // console.log(list.nextSibling.nextSibling);
+    // // }
+
+// let list = document.getElementsByTagName("li");
+// console.log(list);
+
+// let list = document.getElementsByClassName("border");
+// console.log(list);
+
+// let paragraphs = document.getElementsByTagName("p");
+// console.log(paragraphs);
+
+// console.log(paragraphs[1].childNodes[0].childNodes[0].nodeValue = 'llamas');
+
+// let list = document.getElementsByTagName("ol");
+// console.log(list);
+// let ourList = list[0];
+// console.log(ourList);
+
+// ourList.onmouseover = function() {
+//     console.log("mouse over");
+//     //ourList.childNodes[1].childNodes[0].nodeValue = "House";
+//     document.getElementById("home").innerHTML = "House";
+// }
+
+// let button = document.getElementById("clickme");
+// button.onmouseenter = function() {
+//     button.innerHTML = "revealed";
+//     ourList.hidden = false;
+// }
+// button.onmouseleave = function() {
+//     button.innerHTML = "hover me over";
+//     ourList.hidden = true;
+// }
+
+// document.getElementById("input").value = "!!!!!";
+// console.log(document.getElementById("input").hasAttribute("tacos"));
+// console.log(document.getElementById("input").getAttribute("TaCoS"));
+
+let button = document.getElementById("clickme");
+button.onclick = function() {
+    let node = document.createElement("li");
+    console.log(node);
+    node.appendChild(document.createTextNode(
+        document.getElementById("input").value
+    ));
+    document.getElementById("items").appendChild(node);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

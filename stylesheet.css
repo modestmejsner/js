@@ -1,0 +1,20 @@
+*{
+    background-color: red;
+}
+
+button {
+    background-color: #008000;
+    border: greenyellow dotted !important;
+}
+button {
+    background-color: blue;
+    }
+
+.border {
+
+    border: 5px orange solid;
+}
+
+#special{
+    color: green;
+}
